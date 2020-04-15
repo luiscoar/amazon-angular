@@ -1,14 +1,278 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>AmazonAngular</title>
-  <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<head>
+    <meta charset="utf-8">
+    <title>EnMinegocio</title>
+    <base href="/">
+
+    <!--BOOSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!--BOOSTRAP-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+    html {
+            padding: 0 0 0 0;
+            margin: 0 0 0 0;
+        }
+        
+        .borderlist:hover {
+            list-style-position: inside;
+            border: .5px solid #f8eeee !important;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+        
+        .card {
+            transition: 0.5s;
+        }
+        
+        .card:hover {
+            background-color: #e9ecef;
+            transition: 0.5s;
+        }
+        
+        .card-header {
+            border: none;
+            background-color: rgb(255, 255, 255) !important;
+        }
+        
+        .carousel-indicators li {
+            border-color: #223275;
+            box-sizing: inherit;
+        }
+        
+        .container-fluid {
+            padding: 0px 0px;
+        }
+        
+        .nav-color font-color: rgb(255, 255, 255) !important;
+    }
+    .navbar-nav li a {
+        color: rgb(255, 255, 255);
+        border-color: rgb(255, 255, 255) !important;
+    }
+    .prev-view {
+        width: 160px;
+        height: 160px;
+        border-radius: 30px;
+    }
+    .prev-view-carrousel {
+        width: 100%;
+        height: 400px;
+    }
+    .prev-view-prod-carrousel {
+        width: 160px;
+        height: 160px;
+    }
+    .link-to-prod-esp:hover {
+        border: .5px solid #f8eeee !important;
+    }
+    .nav-item:hover {
+        border-color: rgb(255, 255, 255) !important;
+    }
+    .scroll-prod-img {
+        border-radius: 100px;
+    }
+    .our-prods-controls {
+        background-color: rgb(255, 255, 255) !important;
+        transition: 0.5s;
+    }
+    .our-prods-controls>span {
+        color: rgb(233, 236, 239) !important;
+        transition: 0.5s;
+    }
+    .our-prods-controls>span:hover {
+        color: rgb(0, 123, 255) !important;
+        transition: 0.5s;
+    }
+    #contact {
+        margin-top: 5%;
+    }
+    #search-btn-mn {
+        font-color: rgb(255, 255, 255) !important;
+        color: rgb(255, 255, 255) !important;
+    }
+    #search-btn-mn:hover {
+        border: 2px solid #f8eeee !important;
+        border-radius: 15px;
+        font-weight: bold;
+    }
+    #user-exp-carrousel-div {
+        margin-top: -2.5%;
+        transition: 0.5s;
+    }
+    #main-prods-viewer {
+        margin-top: -10%;
+    }
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 100px) {
+        #container-netw-scroll {
+            width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
+            margin-bottom: -9%;
+            margin-top: -1%;
+        }
+        
+        #container-netw-scroll-div {
+            width: 50%;
+            overflow-x: auto;
+            white-space: nowrap;
+            margin-bottom: -9%;
+            margin-top: 3%;
+        }
+        
+        .prev-view-carrousel {
+            width: 100%;
+            height: auto;
+            margin-top: 50px !important;
+        }
+    }
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        #client-rounded-comment {
+            border-radius: 60px !important;
+            margin-left: 20% !important;
+            margin-right: 50% !important;
+            margin-top: -3.5%;
+        }
+        
+        #container-netw-scroll {
+            width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
+            margin-bottom: -9%;
+            margin-top: -1%;
+        }
+        
+        #container-netw-scroll-div {
+            width: 50%;
+            overflow-x: auto;
+            white-space: nowrap;
+            margin-bottom: -9%;
+            margin-top: 3%;
+        }
+        
+        .prev-view-carrousel {
+            width: 100%;
+            height: auto;
+            margin-top: 50px !important;
+        }
+        
+        #title-mn {
+            top: -10%;
+        }
+    }
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        #client-rounded-comment {
+            border-radius: 60px !important;
+            margin-left: 45%;
+            margin-top: -3.5%;
+        }
+    }
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        #client-rounded-comment {
+            border-radius: 60px !important;
+            margin-left: 45%;
+            margin-top: -3.5%;
+        }
+    }
+    #container-prods-scroll {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-bottom: -9%;
+        margin-top: -1%;
+        border-top: 1px solid rgba(0, 0, 0, .125);
+        border-bottom: 1px solid rgba(0, 0, 0, .125);
+    }
+    #container-netw-scroll-div {
+        width: 50%;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-bottom: -9%;
+        margin-top: 3%;
+    }
+    #container-netw-scroll {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-bottom: -9%;
+        margin-top: -1%;
+    }
+    #client-rounded-comment {
+        border-radius: 60px !important;
+        margin-left: 45%;
+        margin-top: -3.5%;
+    }
+    #title-mn {
+        top: 10%;
+    }
+     ::-webkit-scrollbar {
+        display: none;
+    }
+    </style>
 </head>
+
 <body>
-  <app-root></app-root>
+    <app-root></app-root>
+
+    <!--BOOTSTRAP-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--BOOTSTRAP-->
 </body>
+<script>
+    // Activate Carousel
+    $("#portada").carousel();
+    $("#user-exp").carousel();
+
+    // Enable Carousel Indicators
+    $(".item").click(function() {
+        $("#portada").carousel(1);
+        $("#user-exp").carousel(1);
+    });
+
+    // Enable Carousel Controls
+    $(".left").click(function() {
+        $("#portada").carousel("prev");
+        $("#user-exp").carousel("prev");
+    });
+
+    $("#prev").mouseover(function() {
+        var leftPos = $('#container-prods-scroll').scrollLeft();
+        $("#container-prods-scroll").animate({
+            scrollLeft: leftPos - 200
+        }, 800);
+    });
+
+    $("#next").mouseover(function() {
+        var leftPos = $('#container-prods-scroll').scrollLeft();
+        $("#container-prods-scroll").animate({
+            scrollLeft: leftPos + 200
+        }, 800);
+    });
+
+    $("#netw-prev").mouseover(function() {
+        var leftPos = $('#container-netw-scroll').scrollLeft();
+        $("#container-netw-scroll").animate({
+            scrollLeft: leftPos - 200
+        }, 800);
+    });
+
+    $("#netw-next").mouseover(function() {
+        var leftPos = $('#container-netw-scroll').scrollLeft();
+        $("#container-netw-scroll").animate({
+            scrollLeft: leftPos + 200
+        }, 800);
+    });
+</script>
+
 </html>
